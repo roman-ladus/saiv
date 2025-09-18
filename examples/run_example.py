@@ -10,7 +10,7 @@ from saiv.visualizer import Visualizer
 image_path = "images/example.png"
 block_size = 50
 value_type = "saturation"        # "saturation", "hue", or "luminance"
-algorithm_to_use = "quick"       # "merge", "quick", or "bubble"
+algorithm_to_use = "quick"       # "merge", "quick"
 
 # load and resize image
 img = load_image(image_path)
@@ -25,8 +25,7 @@ viz = Visualizer(blocks, img_width, img_height, block_size)
 # choose sorting algorithm
 sorting_algorithms = {
     "merge": merge_sort,
-    "quick": quick_sort,
-    "bubble": bubble_sort
+    "quick": quick_sort
 }
 
 sort_func = sorting_algorithms.get(algorithm_to_use)
