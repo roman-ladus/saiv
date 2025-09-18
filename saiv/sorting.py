@@ -1,6 +1,10 @@
 # saiv/sorting.py
 
 def merge_sort(arr, capture_frame=None):
+    # Capture initial frame
+    if capture_frame:
+        capture_frame(arr)
+    
     def _merge_sort(arr):
         if len(arr) > 1:
             mid = len(arr) // 2
@@ -35,6 +39,10 @@ def merge_sort(arr, capture_frame=None):
 
 
 def quick_sort(arr, capture_frame=None):
+    # Capture initial frame
+    if capture_frame:
+        capture_frame(arr)
+    
     def _quick_sort(arr, low, high):
         if low < high:
             pi = partition(arr, low, high)
@@ -58,6 +66,11 @@ def quick_sort(arr, capture_frame=None):
 
 def bubble_sort(arr, capture_frame=None):
     n = len(arr)
+    
+    # Capture initial frame
+    if capture_frame:
+        capture_frame(arr)
+    
     for i in range(n):
         for j in range(0, n-i-1):
             if arr[j]['value'] > arr[j+1]['value']:
