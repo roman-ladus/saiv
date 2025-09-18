@@ -4,13 +4,13 @@ import os
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from saiv.image_loader import load_image, resize_image, create_blocks
-from saiv.sorting import merge_sort, quick_sort, heap_sort, bubble_sort, selection_sort
+from saiv.sorting import merge_sort, quick_sort, heap_sort, bubble_sort, selection_sort, insertion_sort
 from saiv.visualizer import Visualizer
 
 image_path = "images/example.png"
 block_size = 100
 value_type = "saturation"        # "saturation", "hue", or "luminance"
-algorithm_to_use = "selection"       # "merge", "quick", "heap", "bubble", "selection"
+algorithm_to_use = "insertion"       # "merge", "quick", "heap", "bubble", "selection", "insertion"
 
 # load and resize image
 img = load_image(image_path)
@@ -28,7 +28,8 @@ sorting_algorithms = {
     "quick": quick_sort,
     "heap": heap_sort,
     "bubble": bubble_sort,
-    "selection": selection_sort
+    "selection": selection_sort,
+    "insertion": insertion_sort
 }
 
 sort_func = sorting_algorithms.get(algorithm_to_use)

@@ -131,3 +131,27 @@ def selection_sort(arr, capture_frame=None):
             arr[i], arr[min_idx] = arr[min_idx], arr[i]
             if capture_frame:
                 capture_frame(arr)
+
+
+def insertion_sort(arr, capture_frame=None):
+    n = len(arr)
+    
+    # Capture initial frame
+    if capture_frame:
+        capture_frame(arr)
+    
+    for i in range(1, n):
+        key = arr[i]
+        j = i - 1
+        
+        # Move elements of arr[0..i-1], that are greater than key,
+        # to one position ahead of their current position
+        while j >= 0 and arr[j]['value'] > key['value']:
+            arr[j + 1] = arr[j]
+            if capture_frame:
+                capture_frame(arr)
+            j -= 1
+        
+        arr[j + 1] = key
+        if capture_frame:
+            capture_frame(arr)
