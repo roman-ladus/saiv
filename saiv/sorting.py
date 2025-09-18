@@ -110,3 +110,24 @@ def bubble_sort(arr, capture_frame=None):
                 arr[j], arr[j+1] = arr[j+1], arr[j]
                 if capture_frame:
                     capture_frame(arr)
+
+
+def selection_sort(arr, capture_frame=None):
+    n = len(arr)
+    
+    # Capture initial frame
+    if capture_frame:
+        capture_frame(arr)
+    
+    for i in range(n):
+        # Find the minimum element in remaining unsorted array
+        min_idx = i
+        for j in range(i + 1, n):
+            if arr[j]['value'] < arr[min_idx]['value']:
+                min_idx = j
+        
+        # Swap the found minimum element with the first element
+        if min_idx != i:
+            arr[i], arr[min_idx] = arr[min_idx], arr[i]
+            if capture_frame:
+                capture_frame(arr)
