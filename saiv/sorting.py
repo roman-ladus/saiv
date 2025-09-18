@@ -1,7 +1,6 @@
 # saiv/sorting.py
 
 def merge_sort(arr, capture_frame=None):
-    # Capture initial frame
     if capture_frame:
         capture_frame(arr)
     
@@ -61,3 +60,38 @@ def quick_sort(arr, capture_frame=None):
         return i + 1
 
     _quick_sort(arr, 0, len(arr) - 1)
+
+
+def heap_sort(arr, capture_frame=None):
+    if capture_frame:
+        capture_frame(arr)
+    
+    def heapify(arr, n, i):
+        largest = i
+        left = 2 * i + 1
+        right = 2 * i + 2
+        
+        if left < n and arr[left]['value'] > arr[largest]['value']:
+            largest = left
+        
+        if right < n and arr[right]['value'] > arr[largest]['value']:
+            largest = right
+        
+        if largest != i:
+            arr[i], arr[largest] = arr[largest], arr[i]
+            if capture_frame:
+                capture_frame(arr)
+            heapify(arr, n, largest)
+    
+    n = len(arr)
+    
+    for i in range(n // 2 - 1, -1, -1):
+        heapify(arr, n, i)
+        if capture_frame:
+            capture_frame(arr)
+    
+    for i in range(n - 1, 0, -1):
+        arr[0], arr[i] = arr[i], arr[0]
+        if capture_frame:
+            capture_frame(arr)
+        heapify(arr, i, 0)
