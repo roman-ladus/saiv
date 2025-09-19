@@ -16,7 +16,41 @@ Turn images into sortable mosaics and watch classic sorting algorithms rearrange
 Example input and output are included. After running an example, you'll see an animation window and a final image saved under `output/`.
 
 <img src="images/example.png" alt="Example source" width="260" />
-<img src="output/merge_sorted_by_saturation.png" alt="Example source" width="260" />
+<img src="output/merge_sorted_by_saturation.png" alt="Example output" width="260" />
+
+## Algorithm Visualizations
+
+Watch each sorting algorithm in action as it rearranges image blocks. Each GIF shows the step-by-step process of how different algorithms sort image blocks by their visual properties.
+
+### Merge Sort
+A divide-and-conquer algorithm that splits the array into halves, sorts them recursively, and then merges them back together.
+
+<img src="gifs/merge_sort.gif" alt="Merge Sort Animation" width="400" />
+
+### Quick Sort
+Uses a pivot element to partition the array and recursively sorts the sub-arrays.
+
+<img src="gifs/quick_sort.gif" alt="Quick Sort Animation" width="400" />
+
+### Heap Sort
+Builds a max-heap and repeatedly extracts the maximum element to sort the array.
+
+<img src="gifs/heap_sort.gif" alt="Heap Sort Animation" width="400" />
+
+### Bubble Sort
+Compares adjacent elements and swaps them if they are in the wrong order, repeating until sorted.
+
+<img src="gifs/bubble_sort.gif" alt="Bubble Sort Animation" width="400" />
+
+### Selection Sort
+Repeatedly finds the minimum element from the unsorted portion and places it at the beginning.
+
+<img src="gifs/selection_sort.gif" alt="Selection Sort Animation" width="400" />
+
+### Insertion Sort
+Builds the final sorted array one element at a time by inserting each element into its correct position.
+
+<img src="gifs/insertion_sort.gif" alt="Insertion Sort Animation" width="400" />
 
 
 ## Installation
@@ -112,6 +146,13 @@ viz.save_final_image("output/merge_sorted_by_saturation.png")
 SAIV/
 ├── examples/
 │   └── run_example.py
+├── gifs/
+│   ├── bubble_sort.gif
+│   ├── heap_sort.gif
+│   ├── insertion_sort.gif
+│   ├── merge_sort.gif
+│   ├── quick_sort.gif
+│   └── selection_sort.gif
 ├── images/
 │   └── example.png
 ├── output/
