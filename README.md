@@ -16,6 +16,7 @@ Turn images into sortable mosaics and watch classic sorting algorithms rearrange
 Example input and output are included. After running an example, you'll see an animation window and a final image saved under `output/`.
 
 <img src="images/example.png" alt="Example source" width="260" />
+<img src="output/merge_sorted_by_saturation.png" alt="Example source" width="260" />
 
 
 ## Installation
