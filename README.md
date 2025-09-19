@@ -135,7 +135,7 @@ SAIV/
 
 
 ## License
-MIT License. See `LICENSE` if provided, or set your preferred license for distribution.
+This project is licensed under the MIT License — see the `LICENSE` file for details.
 
 
 ## Acknowledgments
